@@ -1,4 +1,4 @@
-const API = "https://web-production-6ed5.up.railway.app/api/news";
+const API = "https://web-production-2a20d.up.railway.app/api/news";
 
 async function loadNews(){
 
