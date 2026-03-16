@@ -1,4 +1,4 @@
-const API = "http://localhost:8080/api/news";
+const API = "https://web-production-6ed5.up.railway.app/api/news";
 
 async function loadNews(){
 
