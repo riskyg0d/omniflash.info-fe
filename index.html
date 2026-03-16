@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>OmniFlash Terminal</title>
+<link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+<header>
+<div class="navbar">
+<h2>OmniFlash Terminal</h2>
+</div>
+<div class="market-ticker">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+
+    <script type="text/javascript"
+    src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+    async>
+    {
+      "symbols": [
+        { "proName": "BSE:SENSEX", "title": "SENSEX" },
+        { "proName": "FX_IDC:USDINR", "title": "USD/INR" },
+        { "proName": "TVC:GOLD", "title": "Gold" }
+      ],
+      "showSymbolLogo": false,
+      "isTransparent": true,
+      "displayMode": "adaptive",
+      "colorTheme": "dark",
+      "locale": "en"
+    }
+    </script>
+  </div>
+</div>
+<select id="sortFilter">
+
+<option value="latest">Latest</option>
+<option value="source">Source</option>
+<option value="source-time">Source + Time</option>
+
+</select>
+<div class="controls">
+
+<input id="searchInput" placeholder="Search news...">
+
+<select id="categoryFilter">
+<option value="">All</option>
+<option value="markets">Markets</option>
+<option value="business">Business</option>
+<option value="crypto">Crypto</option>
+<option value="economy">Economy</option>
+<option value="commodities"> Commodities</option>
+<option value="geopolitics"> Geopolitics</option>
+<option value="technology"> Technology</option>
+
+</select>
+
+<button onclick="searchNews()">Search</button>
+
+</div>
+
+</header>
+
+<div class="ticker-container">
+<div id="ticker"></div>
+</div>
+
+<div id="loading">Loading news...</div>
+
+<div id="news-container"></div>
+
+<footer>
+<p>OmniFlash Terminal • Real-Time Finance News</p>
+</footer>
+
+<script src="./javascript/script.js"></script>
+
+</body>
+</html>
