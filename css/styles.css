@@ -154,42 +154,42 @@ button:hover {
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
 }
 .ticker-container {
+    width: 100%;
+    overflow: hidden;
     background: #000;
     border-bottom: 1px solid var(--border-subtle);
-    padding: 0.5rem 0;
-    overflow: hidden;
-    white-space: nowrap;
     position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
 }
 
 #ticker {
     display: inline-block;
+    white-space: nowrap;
     padding-left: 100%;
     font-family: var(--font-data);
     font-size: 0.8rem;
     color: var(--accent-gold);
-    will-change: transform;
-    animation: scroll-ticker 80s linear infinite;
+
+    animation-name: ticker-scroll;
+    animation-duration: 120s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 #ticker:hover {
     animation-play-state: paused;
 }
 
-@keyframes scroll-ticker {
-    from {
-        transform: translateX(0);
+@keyframes ticker-scroll {
+    0% {
+        transform: translateX(0%);
     }
-    to {
+
+    100% {
         transform: translateX(-100%);
     }
-}
-main {
-    flex-grow: 1;
-    padding: 3rem 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
-    width: 100%;
 }
 
 #loading {
