@@ -173,7 +173,7 @@ button:hover {
     color: var(--accent-gold);
 
     animation-name: ticker-scroll;
-    animation-duration: 500s;
+    animation-duration: 3000s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
