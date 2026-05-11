@@ -168,7 +168,7 @@ button:hover {
     font-family: var(--font-data);
     font-size: 0.8rem;
     color: var(--accent-gold);
-    animation: scroll-ticker 30s linear infinite;
+    animation: scroll-ticker 60s linear;
 }
 
 @keyframes scroll-ticker {
