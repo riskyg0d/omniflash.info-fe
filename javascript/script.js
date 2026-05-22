@@ -35,7 +35,10 @@ card.className="news-card"
 card.innerHTML=`
 <h3>${n.title}</h3>
 <p>Source: ${n.source}</p>
-<a href="${n.url}" target="_blank">Read full article</a>
+<p>Published: ${new Date(n.publishedTime).toLocaleString('en-IN', {
+    day: '2-digit', month: 'short', year: 'numeric',
+    hour: '2-digit', minute: '2-digit', hour12: true
+})}</p><a href="${n.url}" target="_blank">Read full article</a>
 `
 
 container.appendChild(card)
